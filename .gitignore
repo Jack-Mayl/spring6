@@ -1,0 +1,8 @@
+# Project exclude paths
+/factory-method/target/
+/simple-factory/target/
+/spring6-001-revelation/target/
+/spring6-002-first/target/
+/spring6-003-dependency-injection/target/
+/spring6-004-scoper/target/
+/spring6-005-bean-instantiation/target/

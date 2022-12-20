@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--根据类型进行自动装配-->
+    <!--    自动装配是基于set方法的-->
+    <!--    根据类型进行自动装配的时候 在有效的配置文件当中,某种类型的实例只能有一个 -->
+        <bean class="com.powrnode.spring6.dao.VipDao"/>
+<!--        <bean id="x" class="com.powrnode.spring6.dao.UserDao"/>-->
+        <bean id="y" class="com.powrnode.spring6.dao.UserDao"/>
+        <bean id="cs" class="com.powrnode.spring6.service.CustomerService" autowire="byType"></bean>
+
+
+
+    <!--根据名字进行自动装配-->
+        <!--    注意:自动装配也是基于set方法实现的-->
+        <bean id="orderService" class="com.powrnode.spring6.service.OrderDaoService" autowire="byName"/>
+    <!--    id一般也叫作bean的名称 一但使用autowire 这里的id就不能随便写了 必须是set方法 的方法名一致 去掉set 首字母变小写-->
+    <!--    这里修改了-->
+            <bean id="dao" class="com.powrnode.spring6.dao.OrderDao"/>
+        <!--    <bean id="orderDao" class="com.powrnode.spring6.dao.OrderDao"/>-->
+    <!--    <bean id="orderService" class="com.powrnode.spring6.service.OrderDaoService">-->
+    <!--        <property name="orderDao" ref="orderDao"/>-->
+    <!--     </bean>-->
+
+
+
+    </beans>

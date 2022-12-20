@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="yuQian" class="com.powrnode.spring6.bean.QianDaYe">
+        <property name="aiHaos" >
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>找郭德杠</value>
+            </array>
+        </property>
+        <property name="women">
+            <array>
+                <ref bean="woman"/>
+                <ref bean="woman2"/>
+                <ref bean="woman3"/>
+            </array>
+        </property>
+     </bean>
+    <bean id="woman" class="com.powrnode.spring6.bean.Woman">
+        <property name="name" value="高圆圆"/>
+    </bean>
+    <bean id="woman2" class="com.powrnode.spring6.bean.Woman">
+        <property name="name" value="杨米"/>
+    </bean>
+    <bean id="woman3" class="com.powrnode.spring6.bean.Woman">
+        <property name="name" value="赵鑫"/>
+    </bean>
+</beans>

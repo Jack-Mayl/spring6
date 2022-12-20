@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="mathBean" class="com.powrnode.spring6.bean.MathBean">
+        <!--    第一种方案:使用实体符号代替特殊符号-->
+<!--        <property name="result" value="2 &lt; 3"/>-->
+
+<!--            第二种方案:使用用<![CDATA[]]> 这是 xml的语法-->
+            <property name="result">
+        <!--        只能使用value标签-->
+                <value><![CDATA[2 < 3]]></value>
+            </property>
+    </bean>
+
+</beans>
