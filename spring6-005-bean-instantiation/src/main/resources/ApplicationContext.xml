@@ -9,4 +9,9 @@
 <!--   Spring提供的实例化方法: 第二种:通过简单工厂模式:你需要在Spring配置文件中告诉Spring框架 调用那个类的那个方法获取Bean-->
 <!--    factory-method 属性指定是工厂类当中的静态方法 也就是告诉Spring框架 调用这个方法可以获取Bean-->
     <bean id="starBean" class="com.powernode.spring6.bean.StartFactory" factory-method="get"/>
+<!--    Spring提供的实例化方法: 第三种:通过工厂方法模式. 通过factory-bean属性+factory-method属性共同完成-->
+<!--    告诉spring框架,调用那个对象那个方法获取bean-->
+    <bean id="gunFactory" class="com.powernode.spring6.bean.GunFactory"/>
+<!--    一下的配置很关键: factory-bean属性告诉Spring调用那个对象 factory-method告诉Spring调用该对象的那个方法-->
+    <bean id="gun" factory-bean="gunFactory" factory-method="getGun"/>
 </beans>

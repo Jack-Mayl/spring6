@@ -5,4 +5,11 @@
 /spring6-002-first/target/
 /spring6-003-dependency-injection/target/
 /spring6-004-scoper/target/
-/spring6-005-bean-instantiation/target/
+/spring6-005-bean-instantiation/target/### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
